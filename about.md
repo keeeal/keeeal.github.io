@@ -7,9 +7,8 @@ layout: default
 
 <img class="profile-picture" src="https://avatars2.githubusercontent.com/u/2309403?s=300">
 
-<center>
-Hi! I'm James Keal.  I'm a PhD student of medical physics at the University of Adelaide, South Australia.
-</center>
+######Hi! I'm James Keal.  I'm a PhD student of medical physics at the University of Adelaide, South Australia.
+
 
 ## Research Interest
 

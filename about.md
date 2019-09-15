@@ -14,7 +14,7 @@ At a baseline my honours and PhD studies have been rooted in utilising artificia
 
 ## Publications
 
-1. F.Bar, J.Doe: Effects of having a placeholder of a name
+1. J. Kowlessar, J. Keal, D. Wesley, I. Moffat: One-shot machine learning for rock art style analysis, Pattern Recognition Letters, 2019. *(under review)*
 
 
 ## Typography

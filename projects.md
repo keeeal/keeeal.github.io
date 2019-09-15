@@ -1,18 +1,24 @@
 ---
 layout: default
 ---
-<img class="profile-picture" src="/img/projects.jpg">
+<!-- <img class="profile-picture" src="/img/projects.jpg"> -->
 
 # Projects
 ###### Use the links below to read about some of the projects I've been working on.
 
+{% assign projects = "beamz, dosenet, koi, hyperforest, lifebot, bendy men, alphapilot, stemusicians, ut3" | split: ", " %}
+
+{% for project in projects %}
+### {{ project }}
 {% for tag in site.tags %}
-#### {{ tag[0] }}
+{% if tag[0] == project %}
 <ul>
   {% for post in tag[1] %}
     <li><a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
+{% endif %}
+{% endfor %}
 {% endfor %}
 
 ## Honours/PhD Work (2016-Now)

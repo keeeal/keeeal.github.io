@@ -3,6 +3,7 @@ layout: default
 ---
 # Contact
 ___
+Here are some ways to get into touch with me.
 
 ## Email
 

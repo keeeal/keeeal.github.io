@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## Projects
+<center> ## Projects </center>
 ___
 
 ### Honours 2016

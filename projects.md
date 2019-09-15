@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<img class="profile-picture" src="/img/projects.jpg">
 
 # Projects
 ###### Use the links below to read about some of the projects I've been working on.

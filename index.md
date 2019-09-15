@@ -23,14 +23,13 @@ Calculating radiation dose as quickly as Collapsed Cone Convolution, but as accu
 ### Misc. Projects
 ---
 
-#### Koi *There's always a bigger fish*
+#### **Koi** *There's always a bigger fish*
 
-#### Hyper Forest *The descent*
+#### **Hyper Forest** *The descent*
 
-#### Lifebot *I. Have. Decision. Fatigue.*
+#### **Lifebot** *I. Have. Decision. Fatigue.*
 
-#### Bendy Men*
-##### *\*Northern Running Figures*
+#### **Bendy Men**\* *\*Northern Running Figures*
 
 
 ### AI Club \(President 2018-Now)

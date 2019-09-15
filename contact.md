@@ -2,7 +2,6 @@
 layout: default
 ---
 # Contact
-___
 
 <center>
 Here are some ways to get into touch with me.

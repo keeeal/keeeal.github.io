@@ -52,7 +52,7 @@ Phase 2:  We will give the AI more directions.
 #### STEM Musicians ...*Robots CAN make beautiful masterpieces*
 Pose estimation via videography as an input for a neural net, output to Project Magenta to make some banging tunes.  
 
-#### Ut3 ...*Ultimate tic-tac-toe*
+#### [Ut3](https://jameskeal.com.au/2019/06/04/temporal-difference-learning-for-ultimate-tic-tac-toe.html) ...*Ultimate tic-tac-toe*
 Living vicariously through algorithms because I don't have time to play video games anymore.  
 
 ___

@@ -6,9 +6,9 @@ ___
 
 ## Email
 
-[Home] [james@keal.com.au](mailto:james@keal.com.au)
+Home: [james@keal.com.au](mailto:james@keal.com.au)
 
-[Work] [james.keal@adelaide.edu.au](mailto:james.keal@adelaide.edu.au)
+Work: [james.keal@adelaide.edu.au](mailto:james.keal@adelaide.edu.au)
 
 ---
 

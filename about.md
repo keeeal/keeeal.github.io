@@ -1,11 +1,9 @@
 ---
 layout: default
 ---
-
-# About Me
-
 <img class="profile-picture" src="https://avatars2.githubusercontent.com/u/2309403?s=300">
 
+# About Me
 ###### Hi! I'm James Keal.  I'm a PhD student of medical physics at the University of Adelaide, South Australia.
 
 

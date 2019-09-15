@@ -20,11 +20,6 @@ At a baseline my honours and PhD studies have been rooted in utilising artificia
 1. J. Kowlessar, J. Keal, D. Wesley, I. Moffat: One-shot machine learning for rock art style analysis, Pattern Recognition Letters, 2019. *(under review)*
 
 ___
-# Contact
-___
-<center>
-Here are some ways to get into touch with me.
-</center>
 
 ## Email
 

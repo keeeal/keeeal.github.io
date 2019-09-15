@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Temporal difference learning for ultimate tic-tac-toe"
-tags: temporal difference, ultimate tic-tac-toe
+tags: ut3
 ---
 
 [repo]: https://github.com/keeeal/temporal-ut3

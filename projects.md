@@ -6,6 +6,14 @@ layout: default
 # Projects
 ###### Use the links below to read about some of the projects I've been working on.
 
+{% for tag in site.tags %}
+  <h3>{{ tag[0] }}</h3>
+  <ul>
+    {% for post in tag[1] %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endfor %}
 
 ## Honours/PhD Work (2016-Now)
 

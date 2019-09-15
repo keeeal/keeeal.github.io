@@ -6,15 +6,13 @@ baseurl: "/"
 markdown: kramdown
 highlighter: rouge
 
-tracking_id: #
-
 footer: yes
 footer_url: "https://github.com/keeeal"
 footer_text: "Find me on Github"
 
 sass:
-    style: compressed
-    sass_dir: _sass
+  style: compressed
+  sass_dir: _sass
 
 nav:
  - name: "Projects"

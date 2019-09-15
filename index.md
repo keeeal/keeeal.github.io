@@ -6,16 +6,12 @@ layout: default
 
 ___
 
-### Honours 2016
+### Honours/PhD Work 2016-Now
 
 #### Beamz
 In my honours I used deterministic fluids estimation to encode parameters of a radiation beam.
 
 I then used these inputs to train a neural net to produce Monte Carlo-derived dose-distributions in artificial geometries.  This network was then used in a patient sample with moderate success.
-
-___
-
-### PhD Work 2017-Now
 
 #### DoseNet
 Calculating radiation dose as quickly as Collapsed Cone Convolution, but as accurately as Monte Carlo.

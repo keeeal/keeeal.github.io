@@ -13,3 +13,6 @@ layout: default
 
 * [Twitter](https://twitter.com/_keeeal)
 * [LinkedIn](https://www.linkedin.com/in/jkeal/)
+
+
+{{ site.posts }}

@@ -2,4 +2,4 @@
 layout: default
 ---
 
-## Home sweet home
+Home sweet home

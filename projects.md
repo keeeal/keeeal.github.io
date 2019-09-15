@@ -20,11 +20,12 @@ ut3: Ultimate tic-tac-toe: Living vicariously through algorithms because I don't
 " %}
 
 {% for project in projects %}
-{% assign foo, bar = project | split: ": " %}
-## {{ foo[0] }}
-{{ foo[1] }}
+{% assign proj = project | split: ": " %}
+## {{ proj[0] }}
+### {{ proj[1] }}
+{{ proj[2] }}
 {% for tag in site.tags %}
-{% if tag[0] == foo[0] %}
+{% if tag[0] == proj[0] %}
 <ul>
   {% for post in tag[1] %}
     <li><a href="{{ post.url }}">{{ post.title }}</a></li>

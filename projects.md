@@ -3,7 +3,9 @@ layout: default
 ---
 
 # Projects
-
+<center>
+Use the links below to read about some of the projects I've been working on.
+</center>
 ___
 
 ### Honours/PhD Work (2016-Now)

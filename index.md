@@ -18,7 +18,7 @@ Calculating radiation dose as quickly as Collapsed Cone Convolution, but as accu
 
 ___
 
-### Misc. Projects
+### Misc. Personal Projects
 
 #### **Koi** ...*There's always a bigger fish*
 
@@ -30,7 +30,7 @@ ___
 
 ___
 
-### AI Club \(President 2018-Now)
+### Adelaide University AI Club \(President 2018-Now)
 
 #### Alpha Pilot
 

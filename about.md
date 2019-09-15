@@ -14,34 +14,4 @@ At a baseline my honours and PhD studies have been rooted in utilising artificia
 
 ## Publications
 
-<<<<<<< HEAD
 1. J. Kowlessar, J. Keal, D. Wesley, I. Moffat: One-shot machine learning for rock art style analysis, Pattern Recognition Letters, 2019. *(under review)*
-
-
-## Typography
-
-This is a [link](http://google.com). Something *italics* and something **bold**.
-
-Here is a table
-
-Year | Award     | Category
------|-----------|--------
-2014 | Emmy      | Won Outstanding Lead Actor in a miniseries or a movie
-2015 | BAFTA     | Nominated for Best Leading Actor for Sherlock
-2014 | Satellite | Won Best Actor miniseries or television film
-
-Here is a horizontal rule
-
----
-
-Here is a blockquote
-
-> To a great mind, nothing is little
-
-## References
-
-* Foo Bar: Head of Department, Placeholder Names, Lorem
-* John Doe: Associate Professor, Department of Computer Science, Ipsum
-=======
-1. F.Bar, J.Doe: Effects of having a placeholder of a name
->>>>>>> b0f5e3581f04f95fb8c2ac135a9f58043a81412d

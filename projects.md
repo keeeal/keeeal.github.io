@@ -6,10 +6,12 @@ layout: default
 # Projects
 ###### Use the links below to read about some of the projects I've been working on.
 
-{% assign projects = "beamz, dosenet, koi, hyperforest, lifebot, bendy men, alphapilot, stemusicians, ut3" | split: ", " %}
+{% assign projects =
+  "beamz: desc, dosenet, koi, hyperforest, lifebot, bendy men, alphapilot, stemusicians, ut3"
+| split: ", " %}
 
 {% for project in projects %}
-### {{ project }}
+## {{ project }}
 {% for tag in site.tags %}
 {% if tag[0] == project %}
 <ul>

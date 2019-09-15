@@ -6,7 +6,7 @@ layout: default
 
 ___
 
-### Honours/PhD Work 2016-Now
+### Honours/PhD Work (2016-Now)
 
 #### Beamz
 In my honours I used deterministic fluids estimation to encode parameters of a radiation beam.

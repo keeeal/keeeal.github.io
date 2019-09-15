@@ -20,11 +20,11 @@ ut3: Test"
 " %}
 
 {% for project in projects %}
-{% assign project = project | split: ": " %}
-## {{ project[0] }}
-{{ project[1] }}
+{% assign foo = project | split: ": " %}
+## {{ foo[0] }}
+{{ foo[1] }}
 {% for tag in site.tags %}
-{% if tag[0] == project[0] %}
+{% if tag[0] == foo[0] %}
 <ul>
   {% for post in tag[1] %}
     <li><a href="{{ post.url }}">{{ post.title }}</a></li>

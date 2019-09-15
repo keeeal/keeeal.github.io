@@ -29,7 +29,7 @@ ___
 
 #### **Lifebot** *I. Have. Decision. Fatigue.*
 
-#### **Bendy Men**\* *\*Northern Running Figures*
+#### **Bendy Men** *Northern Running Figures*
 
 ___
 

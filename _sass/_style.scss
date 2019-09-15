@@ -1,8 +1,6 @@
 @import "vars";
 
-/*
-* Basic
-*/
+/* basic */
 
 html {
   height: 100%;
@@ -13,6 +11,8 @@ body {
   margin: 0;
   font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
   height: 100%;
+  background-color: $background;
+  color: $text;
 }
 a {
   text-decoration: none;
@@ -28,9 +28,7 @@ hr {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/*
-* Navbar
-*/
+/* navbar */
 
 #author-name {
   font-size: 30px;
@@ -62,7 +60,7 @@ hr {
   float: right;
 }
 
-/* Divs */
+/* divs */
 
 .container {
   max-width: $max-width;
@@ -70,15 +68,6 @@ hr {
 }
 .wrapper {
   min-height: 100%;
-}
-
-/* Institute Image */
-
-#ins-logo {
-  margin: auto;
-  display: block;
-  max-height: 100px;
-  text-align: center;
 }
 
 @import "syntax";
@@ -125,14 +114,5 @@ hr {
   }
   #navlist li.pull-left {
     float: none;
-  }
-}
-
-/* dark mode */
-
-@media (prefers-color-scheme: dark) {
-  body {
-    color: #9ea6b5;
-    background-color: #1b2027;
   }
 }

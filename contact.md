@@ -5,6 +5,7 @@ layout: default
 ## Email
 
 [Home] [james@keal.com.au](mailto:james@keal.com.au)
+
 [Work] [james.keal@adelaide.edu.au](mailto:james.keal@adelaide.edu.au)
 
 ---
@@ -13,6 +14,3 @@ layout: default
 
 * [Twitter](https://twitter.com/_keeeal)
 * [LinkedIn](https://www.linkedin.com/in/jkeal/)
-
-
-{{ site.posts }}

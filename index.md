@@ -3,6 +3,7 @@ layout: default
 ---
 
 ## Projects
+___
 
 ### Honours 2016
 

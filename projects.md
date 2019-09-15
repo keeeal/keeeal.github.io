@@ -22,7 +22,7 @@ ut3: Test"
 {% for project in projects %}
 {% assign project = project | split: ": " %}
 ## {{ project[0] }}
-project[1]
+{{ project[1] }}
 {% for tag in site.tags %}
 {% if tag[0] == project[0] %}
 <ul>

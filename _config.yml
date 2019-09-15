@@ -17,7 +17,5 @@ sass:
 nav:
  - name: "Projects"
    link: "/projects"
- - name: "About Me"
+ - name: "About Me & Contact"
    link: "/about"
- - name: "Contact"
-   link: "/contact"

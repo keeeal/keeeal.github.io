@@ -6,9 +6,16 @@ layout: default
 # Projects
 ###### Use the links below to read about some of the projects I've been working on.
 
-{% assign projects = "
-  Beamz: Using deterministic fluids estimation to encode parameters of a radiation beam,
-  Dosenet: Test, koi, hyperforest, lifebot, bendy men, alphapilot, stemusicians, ut3"
+{% assign projects =
+"Beamz: Using deterministic fluids estimation to encode parameters of a radiation beam,
+Dosenet: Test,
+Koi: Test,
+Hyperforest: Test,
+Lifebot: Test,
+Bendy Men: Test,
+AlphaPilot: Test,
+Stemusicians: Test,
+ut3: Test"
 | split: ", " %}
 
 {% for project in projects %}

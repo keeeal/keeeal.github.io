@@ -5,7 +5,6 @@ layout: default
 ## Projects
 
 ### Honours 2016
----
 
 #### Beamz
 In my honours I used deterministic fluids estimation to encode parameters of a radiation beam.
@@ -15,7 +14,6 @@ I then used these inputs to train a neural net to produce Monte Carlo-derived do
 ___
 
 ### PhD Work 2017-Now
----
 
 #### DoseNet
 Calculating radiation dose as quickly as Collapsed Cone Convolution, but as accurately as Monte Carlo.
@@ -23,7 +21,6 @@ Calculating radiation dose as quickly as Collapsed Cone Convolution, but as accu
 ___
 
 ### Misc. Projects
----
 
 #### **Koi** *There's always a bigger fish*
 
@@ -36,7 +33,6 @@ ___
 ___
 
 ### AI Club \(President 2018-Now)
----
 
 #### Alpha Pilot
 

@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+# Contact
+___
 
 ## Email
 

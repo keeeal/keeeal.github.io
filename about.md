@@ -6,7 +6,7 @@ layout: default
 
 <img class="profile-picture" src="https://avatars2.githubusercontent.com/u/2309403?s=300">
 
-Hi! I'm James Alan Keal.  I'm a PhD student of medical physics at the University of Adelaide, South Australia.
+Hi! I'm James Keal.  I'm a PhD student of medical physics at the University of Adelaide, South Australia.
 
 ## Research Interest
 
@@ -14,6 +14,7 @@ At a baseline my honours and PhD studies have been rooted in utilising artificia
 
 ## Publications
 
+<<<<<<< HEAD
 1. J. Kowlessar, J. Keal, D. Wesley, I. Moffat: One-shot machine learning for rock art style analysis, Pattern Recognition Letters, 2019. *(under review)*
 
 
@@ -41,3 +42,6 @@ Here is a blockquote
 
 * Foo Bar: Head of Department, Placeholder Names, Lorem
 * John Doe: Associate Professor, Department of Computer Science, Ipsum
+=======
+1. F.Bar, J.Doe: Effects of having a placeholder of a name
+>>>>>>> b0f5e3581f04f95fb8c2ac135a9f58043a81412d

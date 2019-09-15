@@ -3,7 +3,6 @@ layout: default
 ---
 
 # About Me
----
 
 <img class="profile-picture" src="https://avatars2.githubusercontent.com/u/2309403?s=300">
 

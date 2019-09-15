@@ -16,7 +16,8 @@ Bendy Men: Test,
 AlphaPilot: Test,
 Stemusicians: Test,
 ut3: Test"
-| split: ", " %}
+| split: ",
+" %}
 
 {% for project in projects %}
 ## {{ project }}

@@ -14,11 +14,7 @@
   {% else %}
     {% assign desc = site.description %}
   {% endif %}
-  {% if page.url %}
-    {% assign url = site.url | append: site.baseurl | append: page.url %}
-  {% else %}
-    {% assign url = site.url | append: site.baseurl | append: page.url %}
-  {% endif %}
+  {% assign url = site.url | append: site.baseurl | append: page.url %}
   <meta name="description" content="{{ desc }}">
   <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS" href="/feed.xml" />

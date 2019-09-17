@@ -54,7 +54,7 @@ ut3
 ## {{ proj[0] }}
 ### {{ proj[1] }}
 {{ proj[2] }}
-{% for tag in site.tags.proj[0] %}
+{% for tag in site.tags.{{ proj[0] }} %}
 <ul>
   {% for post in tag[1] %}
     <li><a href="{{ post.url }}">{{ post.title }}</a></li>

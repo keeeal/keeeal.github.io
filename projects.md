@@ -1,6 +1,5 @@
 ---
 layout : default
-description: James Keal - Projects
 ---
 
 # Projects

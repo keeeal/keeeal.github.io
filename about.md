@@ -1,6 +1,5 @@
 ---
 layout: default
-description: James Keal - About
 ---
 
 <img class="profile-picture" src="{{ site.profile_picture }}">

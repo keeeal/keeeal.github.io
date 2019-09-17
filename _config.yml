@@ -9,6 +9,7 @@ twitter_username: "_keeeal"
 
 markdown: kramdown
 highlighter: rouge
+permalink: /:title
 
 footer: yes
 footer_url: "https://github.com/keeeal"

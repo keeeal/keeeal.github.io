@@ -9,12 +9,12 @@
   .container {
     max-width: 83%;
   }
-  .navbar-ul {
-    margin-top: 5px;
-  }
-  .navbar {
+  nav {
     text-align: center;
     padding: 50px 0px 0px 0px;
+  }
+  nav ul {
+    margin-top: 5px;
   }
   #site-title {
     width: 100%;

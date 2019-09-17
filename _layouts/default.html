@@ -53,7 +53,7 @@
   <div class="wrapper">
     <nav class="container">
       <a id="site-title" class="alignable pull-left" href="{{ site.baseurl }}/">{{ site.title }}</a>
-      <ul id="navlist" class="alignable pull-right navbar-ul">
+      <ul id="navlist" class="alignable pull-right">
         {% for x in site.nav %}
           <li class="alignable pull-left nav-list"><a href="{{ x.link }}">{{ x.name }}</a></li>
           {% if forloop.last == false %}

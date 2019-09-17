@@ -16,8 +16,6 @@ My honours and PhD studies have been in using artificial intelligence to improve
 
 1. J. Kowlessar, J. Keal, D. Wesley, I. Moffat: One-shot machine learning for rock art style analysis, Pattern Recognition Letters, 2019. *(under review)*
 
-<address>
-
 ## Email
 
 Home: [james@keal.com.au](mailto:james@keal.com.au)
@@ -29,5 +27,3 @@ Work: [james.keal@adelaide.edu.au](mailto:james.keal@adelaide.edu.au)
 
 * [Twitter](https://twitter.com/_keeeal)
 * [LinkedIn](https://www.linkedin.com/in/jkeal/)
-
-</address>

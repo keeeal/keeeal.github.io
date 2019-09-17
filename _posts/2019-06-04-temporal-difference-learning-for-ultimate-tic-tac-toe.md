@@ -1,6 +1,5 @@
 ---
 layout: post
-title: "Temporal difference learning for ultimate tic-tac-toe"
 tags: ut3
 ---
 

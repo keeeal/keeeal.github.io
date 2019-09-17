@@ -13,7 +13,7 @@ This post describes the implementation of temporal difference learning that can 
 
 ## What is ultimate tic-tac-toe?
 
-Let's start with the game. You probably already know how to play the original version of [tic-tac-toe](https://en.wikipedia.org/wiki/Tic-tac-toe). Well ultimate tic-tac-toe is similar, except that each of the nine squares on the board contains another small game of tic-tac-toe! Let's call the big game the "macro game" and the smaller games "micro games". A player must win micro games to claim corresponding squares in the macro game, the goal being to win three micro games in a row. Simple, right?
+Let's start with the game. You probably already know how to play the original version of [tic-tac-toe](https://en.wikipedia.org/wiki/Tic-tac-toe). Well ultimate tic-tac-toe is similar, except that each square on the board contains another, smaller game of tic-tac-toe! Let's call the big game the "macro game" and the small games "micro games". A player must win micro games to claim corresponding squares in the macro game. The goal is to win three micro games in a row. Simple, right?
 
 Not so fast! There is a catch. The most important rule of ultimate tic-tac-toe is the following: The square you pick dictates the next micro game your opponent must play in. Specifically, whichever row and column you choose to play in a micro game is the row and column of the macro game your opponent is forced to play in next. So, for example, if you are first to move and you choose the middle square in any one of the micro games, your opponent must make their next move in the middle of the macro game. If this is confusing, take a look at Figure 1. Highlighted squares indicate where the current player is permitted to play.
 

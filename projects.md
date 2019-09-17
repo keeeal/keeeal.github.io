@@ -1,12 +1,13 @@
 ---
 layout : default
+description: James Keal - Projects
 ---
-<!-- <img class="profile-picture" src="/img/projects.jpg"> -->
 
 # Projects
 ###### Use the links below to read about some of the projects I've been working on.
 
 {% assign projects =
+
 "Beamz
 - Using deterministic fluids estimation to encode parameters of a radiation beam
 - I used these inputs to train a neural net to produce Monte Carlo-derived dose-distributions in artificial geometries. This network was then used in a patient sample with moderate success.
@@ -36,7 +37,7 @@ AlphaPilot
 - Phase 1: Previous authors have achieved AI piloted flat drone flight - we will replicate this.
 Phase 2: We will give the AI more directions.
 
-Stemusicians
+STEMusicians
 - Robots CAN make beautiful masterpieces
 - Pose estimation via videography as an input for a neural net, output to Project Magenta to make some banging tunes.
 
@@ -53,13 +54,11 @@ ut3
 ## {{ proj[0] }}
 ### {{ proj[1] }}
 {{ proj[2] }}
-{% for tag in site.tags %}
-{% if tag[0] == proj[0] %}
+{% for tag in site.tags.proj[0] %}
 <ul>
   {% for post in tag[1] %}
     <li><a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
-{% endif %}
 {% endfor %}
 {% endfor %}

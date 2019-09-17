@@ -1,6 +1,6 @@
 ---
 layout: default
-description: James Keal's homepage
+description: James Keal - Home
 ---
 
 Home sweet home

@@ -51,7 +51,7 @@
 </head>
 <body>
   <div class="wrapper">
-    <div class="navbar container">
+    <nav class="container">
       <a id="site-title" class="alignable pull-left" href="{{ site.baseurl }}/">{{ site.title }}</a>
       <ul id="navlist" class="alignable pull-right navbar-ul">
         {% for x in site.nav %}
@@ -61,18 +61,18 @@
           {% endif %}
         {% endfor %}
       </ul>
-    </div>
+    </nav>
     <div style="clear:both"></div>
     <hr>
-      <div class="container content">
-        {{ content }}
-      </div>
-      {% if site.footer == true %}
-        <footer>
-          <a href="{{ site.footer_url }}" style="color: black">
-            <small>{{ site.footer_text }}</small>
-          </a>
-        </footer>
-      {% endif %}
+    <main class="container">
+      {{ content }}
+    </main>
+    {% if site.footer == true %}
+    <footer>
+      <a href="{{ site.footer_url }}" style="color: black">
+        <small>{{ site.footer_text }}</small>
+      </a>
+    </footer>
+    {% endif %}
   </div>
 </body>

@@ -55,11 +55,11 @@ nav ul li {
   display: inline-block;
 }
 .left {
-  @extend .alignable;
+  @extend .inline;
   float: left;
 }
 .right {
-  @extend .alignable;
+  @extend .inline;
   float: right;
 }
 

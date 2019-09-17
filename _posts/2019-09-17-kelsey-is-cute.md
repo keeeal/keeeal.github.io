@@ -3,8 +3,8 @@ layout: post
 tags: kelsey
 ---
 
-![ultimate tic-tac-toe gif](/img/ut3.gif)
-###### Figure 1: A game of ultimate tic-tac-toe in progress. [[source]](https://playground.riddles.io/competitions/ultimate-tic-tac-toe/how-to-play)
+![ultimate tic-tac-toe gif](/img/kelsey001.jpg)
+###### Figure 1: Kelsey being cute.
 
 ## Very cute
 

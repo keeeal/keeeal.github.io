@@ -52,12 +52,12 @@
 <body>
   <div class="wrapper">
     <nav class="container">
-      <a id="site-title" class="alignable pull-left" href="{{ site.baseurl }}/">{{ site.title }}</a>
-      <ul id="navlist" class="alignable pull-right">
+      <a id="site-title" class="inline left" href="{{ site.baseurl }}/">{{ site.title }}</a>
+      <ul class="inline right">
         {% for x in site.nav %}
-          <li class="alignable pull-left nav-list"><a href="{{ x.link }}">{{ x.name }}</a></li>
+          <li class="inline left"><a href="{{ x.link }}">{{ x.name }}</a></li>
           {% if forloop.last == false %}
-            <li class="alignable pull-left nav-list">&middot;</li>
+            <li class="inline left">&middot;</li>
           {% endif %}
         {% endfor %}
       </ul>

@@ -32,7 +32,7 @@ footer {
   margin: 1em 0 1em 0;
 }
 
-/* nav */
+/* nav bar */
 
 #site-title {
   font-size: 26px;
@@ -43,28 +43,27 @@ nav {
   padding: 50px 0 50px 0;
 }
 nav ul {
-  display: inline-block;
   margin: 0;
   padding: 5px 0 5px 0;
   margin-left: 20px;
 }
-.nav-list {
+nav ul li {
   list-style-type: none;
   margin: 0 6px 0 6px;
 }
-.alignable {
+.inline {
   display: inline-block;
 }
-.pull-left {
+.left {
   @extend .alignable;
   float: left;
 }
-.pull-right {
+.right {
   @extend .alignable;
   float: right;
 }
 
-/* divs */
+/* special divs */
 
 .container {
   max-width: $max-width;

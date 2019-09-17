@@ -23,5 +23,3 @@ nav:
    link: "/projects"
  - name: "About Me"
    link: "/about"
- - name: "Contact"
-   link: "/about#email"

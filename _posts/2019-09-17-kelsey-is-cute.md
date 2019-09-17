@@ -4,7 +4,7 @@ tags: kelsey
 ---
 
 ![ultimate tic-tac-toe gif](/img/kelsey001.jpg)
-###### Figure 1: Kelsey being cute.
+<caption>Figure 1: Kelsey being cute.</caption>
 
 ## Very cute
 

@@ -3,6 +3,9 @@ description: "James Keal"
 url: "https://jameskeal.com.au"
 baseurl: "/"
 
+favicon: yes
+favicon_dir: "/img/favicon"
+
 author: James Keal
 profile_picture: "https://avatars2.githubusercontent.com/u/2309403"
 twitter_username: "_keeeal"

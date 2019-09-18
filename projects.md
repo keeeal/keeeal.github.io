@@ -3,7 +3,7 @@ layout : default
 ---
 
 # Projects
-###### Use the links below to read about some of the projects I've been working on.
+###### Here are some of the projects I've been working on.
 
 {% assign projects =
 

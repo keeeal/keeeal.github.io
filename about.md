@@ -1,10 +1,11 @@
 ---
 layout: default
+title: About Me
 ---
 
 <img class="profile-picture" src="{{ site.profile_picture }}">
 
-# About Me
+# {{ page.title }}
 ###### Hi! I'm James. I'm a PhD student of medical physics at the University of Adelaide, South Australia.
 
 

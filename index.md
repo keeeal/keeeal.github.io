@@ -1,8 +1,9 @@
 ---
 layout: default
+title: Recent Posts
 ---
 
-# Recent Posts
+# {{ page.title }}
 ###### Welcome to my blog.
 
 {% for post in site.posts %}

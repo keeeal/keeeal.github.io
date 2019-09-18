@@ -1,8 +1,9 @@
 ---
 layout : default
+title: Projects
 ---
 
-# Projects
+# {{ page.title }}
 ###### Here are some of the projects I've been working on.
 
 {% assign projects =

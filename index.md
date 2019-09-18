@@ -8,6 +8,6 @@ title: Recent Posts
 
 {% for post in site.posts %}
 ## <a style="color: inherit" href="{{ post.url }}">{{ post.title }}</a>
-<small>{{ page.date | date_to_long_string }}</small>
+<small>{{ post.date | date_to_long_string }}</small>
 {{ post.excerpt }}
 {% endfor %}

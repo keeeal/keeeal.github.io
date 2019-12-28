@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: ut3
+tags: UT3
 ---
 
 You probably already know how to play the original version of [tic-tac-toe](https://en.wikipedia.org/wiki/Tic-tac-toe). Well ultimate tic-tac-toe is similar, except that each square on the board contains another, smaller game of tic-tac-toe! Let's call the big game the "macro game" and the small games "micro games". A player must win micro games to claim corresponding squares in the macro game. The goal is to win three micro games in a row. Simple, right?

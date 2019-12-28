@@ -41,7 +41,7 @@ STEMusicians
 - Robots CAN make beautiful masterpieces
 - Pose estimation via videography as an input for a neural net, output to Project Magenta to make some banging tunes.
 
-ut3
+UT3
 - Ultimate tic-tac-toe
 - Living vicariously through algorithms because I don't have time to play video games anymore.
 
@@ -59,6 +59,7 @@ Misc
 ### {{ proj[1] }}
 {{ proj[2] }}
 {% for tag in site.tags %}
+{{ tag }}
 {% if tag[0] == proj[0] %}
 <ul>
   {% for post in tag[1] %}

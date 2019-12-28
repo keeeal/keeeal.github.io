@@ -43,7 +43,11 @@ STEMusicians
 
 ut3
 - Ultimate tic-tac-toe
-- Living vicariously through algorithms because I don't have time to play video games anymore."
+- Living vicariously through algorithms because I don't have time to play video games anymore.
+
+Misc
+- Other miscellaneous projects
+- Mostly one-day builds and things that don't fit anywhere else."
 | split : "
 
 " %}

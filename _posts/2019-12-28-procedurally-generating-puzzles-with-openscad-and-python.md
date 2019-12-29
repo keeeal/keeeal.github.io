@@ -22,9 +22,10 @@ Each side is given a value from one to six and non-edge elements are numbered ac
 Both of these steps can be done (using numpy) with just a few lines of code:
 
 ```python
-x, y, z = shape
-face_values = (1, 2), (3, 4), (5, 6)
-array = np.pad(np.zeros((x - 2, y - 2, z - 2)), 1, constant_values=face_values)
+    x, y, z = shape
+    face_values = (1, 2), (3, 4), (5, 6)
+    array = np.pad(np.zeros((x - 2, y - 2, z - 2)), 1,
+        constant_values=face_values)
 ```
 
 Along each edge, element values are chosen randomly from one of the faces that they are adjacent to:
@@ -32,16 +33,23 @@ Along each edge, element values are chosen randomly from one of the faces that t
 ![puzzle-cube-003](/img/puzzle-cube-003.png)
 
 ```python
-for axis in range(3):
-    ends = 3*[(0, -1)]
-    ends[axis] = (slice(None),)
-        for idx in product(*ends):
-            array[idx] = np.random.choice((
-                face_values[axis - 1][idx[axis - 1]],
-                face_values[axis - 2][idx[axis - 2]],
-            ), shape[axis])
+  for axis in range(3):
+      ends = 3*[(0, -1)]
+      ends[axis] = (slice(None),)
+          for idx in product(*ends):
+              array[idx] = np.random.choice((
+                  face_values[axis - 1][idx[axis - 1]],
+                  face_values[axis - 2][idx[axis - 2]],
+              ), shape[axis])
 ```
 
 Finally, corner values are chosen randomly from the value of adjacent edge elements. This ensures that each corner remains connected to a puzzle piece.
 
 ![puzzle-cube-004](/img/puzzle-cube-004.png)
+
+```python
+  for idx in product((0, -1), (0, -1), (0, -1)):
+      delta = np.copysign(np.eye(3), idx).astype(np.int)
+      array[idx] = np.random.choice(
+          list(set(array[tuple(idx + i)] for i in delta)))
+```

@@ -11,6 +11,8 @@ I wrote the code for this project as an exercise in procedurally generate 3D-pri
 
 ## The algorithm
 
+### Faces values
+
 The algorithm begins by creating an array of zeros with the same shape as the completed puzzle. To illustrate, let our puzzle be a 4×4×4 cube:
 
 ![puzzle-cube-001](/img/puzzle-cube-001.png)
@@ -22,34 +24,69 @@ Each side is given a value from one to six and non-edge elements are numbered ac
 Both of these steps can be done (using numpy) with just a few lines of code:
 
 ```python
-    x, y, z = shape
-    face_values = (1, 2), (3, 4), (5, 6)
-    array = np.pad(np.zeros((x - 2, y - 2, z - 2)), 1,
-        constant_values=face_values)
+x, y, z = shape
+face_values = (1, 2), (3, 4), (5, 6)
+array = np.pad(np.zeros((x - 2, y - 2, z - 2)), 1,
+    constant_values=face_values)
 ```
+
+### Edge values
 
 Along each edge, element values are chosen randomly from one of the faces that they are adjacent to:
 
 ![puzzle-cube-003](/img/puzzle-cube-003.png)
 
 ```python
-  for axis in range(3):
-      ends = 3*[(0, -1)]
-      ends[axis] = (slice(None),)
-          for idx in product(*ends):
-              array[idx] = np.random.choice((
-                  face_values[axis - 1][idx[axis - 1]],
-                  face_values[axis - 2][idx[axis - 2]],
-              ), shape[axis])
+for axis in range(3):
+    ends = 3*[(0, -1)]
+    ends[axis] = (slice(None),)
+        for idx in product(*ends):
+            array[idx] = np.random.choice((
+                face_values[axis - 1][idx[axis - 1]],
+                face_values[axis - 2][idx[axis - 2]],
+            ), shape[axis])
 ```
+
+### Corner values
 
 Finally, corner values are chosen randomly from the value of adjacent edge elements. This ensures that each corner remains connected to a puzzle piece.
 
 ![puzzle-cube-004](/img/puzzle-cube-004.png)
 
 ```python
-  for idx in product((0, -1), (0, -1), (0, -1)):
-      delta = np.copysign(np.eye(3), idx).astype(np.int)
-      array[idx] = np.random.choice(
-          list(set(array[tuple(idx + i)] for i in delta)))
+for idx in product((0, -1), (0, -1), (0, -1)):
+    delta = np.copysign(np.eye(3), idx).astype(np.int)
+    array[idx] = np.random.choice(
+        list(set(array[tuple(idx + i)] for i in delta)))
+```
+
+### Getting each face
+
+```python
+faces = []
+for n, (axis, end) in enumerate(product(range(3), (0, -1))):
+    idx = 3*[slice(None)]
+    idx[axis] = end
+    faces.append(array[tuple(idx)] == n + 1)
+```
+
+### Saving each face
+
+```python
+def save(obj, name, stl=False):
+    scad_render_to_file(obj, name + '.scad')
+    if stl:
+        call(['openscad', name + '.scad', '-o', name + '.stl'])
+        remove(name + '.scad')
+```
+
+```python
+for n, face in enumerate(faces):
+    piece = union()
+    for i, row in enumerate(face):
+        for j, value in enumerate(row):
+            if value:
+                piece += translate([10*i, 10*j, 0])(cube([10, 10, 10]))
+
+    save(piece, 'piece_' + str(n), stl=stl)
 ```

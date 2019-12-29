@@ -59,10 +59,6 @@ Misc
 ### {{ proj[1] }}
 {{ proj[2] }}
 {% for tag in site.tags %}
-...
-{{ tag[0] }}
-{{ proj[0] }}
-...
 {% if tag[0] == proj[0] %}
 <ul>
   {% for post in tag[1] %}

@@ -15,7 +15,7 @@ The algorithm begins by creating an array oz zeros with the same shape as the co
 
 ![puzzle-cube-001](/img/puzzle-cube-001.png)
 
-```
+```python
 x, y, z = shape
   face_values = (1, 2), (3, 4), (5, 6)
   array = np.pad(np.zeros((x - 2, y - 2, z - 2)), 1,

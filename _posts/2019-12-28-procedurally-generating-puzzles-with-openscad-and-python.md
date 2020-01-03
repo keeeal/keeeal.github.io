@@ -59,7 +59,7 @@ Finally, we need to give values to the array's corner elements. But hang on, wer
 
 The element in the top right corner is not connected to the rest of the green-coloured face! To solve this, we must choose the value of each corner randomly from the value of neighbouring elements. This ensures that each corner remains connected to a puzzle piece.
 
-In the code, we visit each of the 8 corners by again considering the index extremes of each axis. A delta array provides a way of iterating through all neighbouring elements. A python set is used to remove  ensure that having two neighbours of the same value doesn't double the probabilty of that value being chosen, although this is not strictly necessary. The code is as follows:
+In the code, we visit each of the 8 corners by again considering the index extremes of each axis. A delta array provides a way of iterating through all neighbouring elements. A python set is used to remove duplicates, ensuring that having two neighbours of the same value doesn't double the probability of that value being chosen, although this is not strictly necessary. The code is as follows:
 
 ```python
 for idx in product((0, -1), (0, -1), (0, -1)):
@@ -86,9 +86,18 @@ for n, (axis, end) in enumerate(product(range(3), (0, -1))):
     faces.append(array[tuple(idx)] == face_values[int(n/2)][n%2])
 ```
 
+Each face will look something like this:
+
+```python
+array([[False, False, False, False],
+       [False,  True,  True,  True],
+       [ True,  True,  True,  True],
+       [ True, False,  True, False]])
+```
+
 ### Converting each face into a solid object
 
-The simplest way to convert boolean arrays into solid, 3D-printable objects as to place a cube at each true value's coordinate. In general, however, we can use any shape as our puzzle element. Using solidpython we can define a python function called *element*, which generates OpenSCAD code:
+The simplest way to convert boolean arrays into solid, 3D-printable objects as to place a cube at each true value's coordinate. In general, however, we can use any shape as our puzzle element. Using solidpython we can define a python function called *element*, which generates OpenSCAD code for a cube with rounded edges:
 
 ```python
 def element(x, y, size, r=1, tol=.2, segments=32):
@@ -97,14 +106,14 @@ def element(x, y, size, r=1, tol=.2, segments=32):
             for i, j, k in product(*3*[(r+tol, size-r-tol)]))))
 ```
 
-The shape produced by *element* is slightly smaller than it could be to allow the puzzle to fit together with ease. This means we also need a simple *connector* object too:
+The shape produced by *element* is slightly diminished so that the puzzle fits together easily. Because of this, we need a simple *connector* object too:
 
 ```python
 def connector(x, y, size, r=1, tol=.2, segments=32):
     return translate([size*x+r, size*y+r, r])(cube(size-2*r))
 ```
 
-We can use these functions as follows:
+We can use these functions to define each piece as follows:
 
 ```python
 pieces = []
@@ -118,9 +127,11 @@ for n, face in enumerate(faces):
                 if j and face[i][j-1]: pieces[-1] += connector(i, j-.5, size)
 ```
 
+The list called *pieces* now contains solidpython objects.
+
 ### Saving each face
 
-Solidpython provides a function called *scad_render_to_file*, which creates OpenSCAD code from our python definition. Combine this with a call to OpenSCAD's CLI and we have a function for saving pieces as STL files!
+Solidpython provides a function called *scad_render_to_file*, which creates OpenSCAD code from our solidpython objects. Combine this with a call to OpenSCAD's CLI and we have a function for saving pieces as STL files, directly from python!
 
 ```python
 def save(obj, name, stl=False):

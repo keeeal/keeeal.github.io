@@ -5,7 +5,7 @@ tags: Misc python openscad
 
 This post describes a project in which I used OpenSCAD and Python to create a randomly generated puzzle cube.
 
-![puzzle-cube](https://i.imgur.com/PfvlCmF.png)
+![puzzle-cube](/img/puzzle-cube-000.png)
 
 I wrote this code as an exercise in procedurally generating 3D-printable objects. The algorithm produces six pieces that fit together to form a cube. Since the puzzle is randomly generated, the user is not aware of the solution. This means that even the puzzle's creator can have the satisfaction of solving it for themselves!
 
@@ -21,7 +21,11 @@ Each face of the puzzle cube must be numbered. The numbers themselves don't matt
 
 ![puzzle-cube-002](/img/puzzle-cube-002.png)
 
-Everything described so far can be done (using numpy) with the following lines of code:
+White voxels represent elements that are not necessarily zero, but with a value that has yet to be finalised. Everything described so far can be done (using numpy) with the following lines of code:
+
+```python
+import numpy as np
+```
 
 ```python
 x, y, z = shape
@@ -34,7 +38,11 @@ array = np.pad(np.zeros((x - 2, y - 2, z - 2)), 1,
 
 The edges of the puzzle are the interesting part — the way they fit together is what makes it a puzzle at all! Along each edge of the puzzle, element values must be chosen at random. There are only two possible values that they can take: the values of the faces that meet at the edge.
 
-Since the puzzle is a cube, there are a total of 12 edges to be considered. We can iterate through them by first considering each of the 3 axes (x, y, and z). For each axis, we then consider the index extremes of the other two (denoted in python as 0 and -1) and iterate through all 4 possible combinations. The final trick is using numpy's random choice function and indexing to give values to each edge all at once! The code for this is provided below:
+Since the puzzle is a cube, there are 12 edges to be considered. We can iterate through them by first considering each of the 3 axes (x, y, and z). For each axis, we then consider the index extremes of the other two (denoted in python as 0 and -1), iterating through all 4 possible combinations. The final trick is using numpy's random choice function and indexing to give values to each edge all at once! The code for this is provided below:
+
+```python
+from itertools import product
+```
 
 ```python
 for axis in range(3):
@@ -53,13 +61,13 @@ After all edge values have been chosen, the array should look something like thi
 
 ### Corners
 
-Finally, we need to give values to the array's corner elements. But hang on, weren't the corners given random values in the last step? Why are those values not good enough? Well, there are two reasons. The last step only considered the values of two faces that meet at the edge, while at a corner there are three. But, more importantly, it is currently possible for a corner element to be disconnected from its face! Consider the following example:
+Finally, we need to give values to the array's corner elements. But hang on, weren't the corners given random values in the last step? Why are those values not good enough? There are two reasons. The last step only considered the values of two faces that meet at each edge, while at a corner there are three. But, more importantly, it is currently possible for a corner element to be disconnected from its face! Consider the following example:
 
 ![puzzle-cube-004](/img/puzzle-cube-004.png)
 
-The element in the top right corner is not connected to the rest of the green-coloured face! To solve this, we must choose the value of each corner randomly from the value of neighbouring elements. This ensures that each corner remains connected to a puzzle piece.
+The element in the top right corner is not connected to the rest of the green-coloured face! To solve this, we must choose the value of each corner randomly from the values of neighbouring elements. This ensures that each corner remains connected to a puzzle piece.
 
-In the code, we visit each of the 8 corners by again considering the index extremes of each axis. A delta array provides a way of iterating through all neighbouring elements. A python set is used to remove duplicates, ensuring that having two neighbours of the same value doesn't double the probability of that value being chosen, although this is not strictly necessary. The code is as follows:
+In the code, we visit each of the 8 corners by again considering the index extremes of each axis. A delta array provides a way of getting the values of all neighbouring elements. A python set is used to remove duplicates, ensuring that having two neighbours of the same value doesn't double the probability of that value being chosen, although this is not strictly necessary. The code is as follows:
 
 ```python
 for idx in product((0, -1), (0, -1), (0, -1)):
@@ -76,7 +84,7 @@ A complete puzzle!
 
 ### Getting each face
 
-From here, getting the shape of each piece is a simple as checking each face for elements containing that face's value. This will produce a boolean array to represent each piece, with true values where the piece is filled and false where there are gaps. We store the boolean arrays in a list.
+From here, getting the shape of each piece is a simple as checking each face for elements containing that face's value. This will produce a boolean array to represent each piece, with *true* values where the piece is to be filled and *false* where there are to be gaps. We store the boolean arrays in a list.
 
 ```python
 faces = []
@@ -86,7 +94,7 @@ for n, (axis, end) in enumerate(product(range(3), (0, -1))):
     faces.append(array[tuple(idx)] == face_values[int(n/2)][n%2])
 ```
 
-Each face will look something like this:
+At this point, a face might look something like this:
 
 ```python
 array([[False, False, False, False],
@@ -95,9 +103,16 @@ array([[False, False, False, False],
        [ True, False,  True, False]])
 ```
 
+![puzzle-cube-006](/img/puzzle-cube-006.png)
+
 ### Converting each face into a solid object
 
-The simplest way to convert boolean arrays into solid, 3D-printable objects as to place a cube at each true value's coordinate. In general, however, we can use any shape as our puzzle element. Using solidpython we can define a python function called *element*, which generates OpenSCAD code for a cube with rounded edges:
+The simplest way to convert boolean arrays into solid, 3D-printable objects as to place a cube at each *true* value's coordinate. In general, however, we can use any shape as our puzzle element. Using [solidpython](https://github.com/SolidCode/SolidPython) we can define a python function called *element*, which generates OpenSCAD code for a cube with rounded edges:
+
+```python
+from solid import *
+from solid.utils import *
+```
 
 ```python
 def element(x, y, size, r=1, tol=.2, segments=32):
@@ -127,11 +142,16 @@ for n, face in enumerate(faces):
                 if j and face[i][j-1]: pieces[-1] += connector(i, j-.5, size)
 ```
 
-The list called *pieces* now contains solidpython objects.
+The list called *pieces* now contains solidpython objects that define the 3D geometry of our puzzle pieces!
 
 ### Saving each face
 
-Solidpython provides a function called *scad_render_to_file*, which creates OpenSCAD code from our solidpython objects. Combine this with a call to OpenSCAD's CLI and we have a function for saving pieces as STL files, directly from python!
+Solidpython provides a function called *scad_render_to_file*, which creates OpenSCAD code from our solidpython objects. Combine this with an optional call to OpenSCAD's CLI and we have a function for saving pieces as STL files, directly from python!
+
+```python
+from subprocess import call
+from os import remove
+```
 
 ```python
 def save(obj, name, stl=False):
@@ -147,3 +167,9 @@ Let's use this on each piece.
 for n, piece in enumerate(pieces):
     save(piece, 'piece_' + str(n), stl=stl)
 ```
+
+## Lessons learnt
+
+### Tools
+
+ - [This online isometric drawing tool](https://www.nctm.org/Classroom-Resources/Illuminations/Interactives/Isometric-Drawing-Tool/)

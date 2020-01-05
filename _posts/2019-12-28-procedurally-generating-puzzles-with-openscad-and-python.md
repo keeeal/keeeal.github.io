@@ -5,7 +5,7 @@ tags: Misc python openscad
 
 This post describes a project in which I used OpenSCAD and Python to create a randomly generated puzzle cube.
 
-![puzzle-cube](/img/puzzle-cube-000.png)
+![puzzle-cube-000](/img/puzzle-cube-000.png)
 
 I wrote this code as an exercise in procedurally generating 3D-printable objects. The algorithm produces six pieces that fit together to form a cube. Since the puzzle is randomly generated, the user is not aware of the solution. This means that even the puzzle's creator can have the satisfaction of solving it for themselves!
 
@@ -82,7 +82,9 @@ By now the array should look like this:
 
 A complete puzzle!
 
-### Getting each face
+## Creating 3D objects
+
+### Get each face
 
 From here, getting the shape of each piece is a simple as checking each face for elements containing that face's value. This will produce a boolean array to represent each piece, with *true* values where the piece is to be filled and *false* where there are to be gaps. We store the boolean arrays in a list.
 
@@ -103,11 +105,13 @@ array([[False, False, False, False],
        [ True, False,  True, False]])
 ```
 
+... which would represent a piece that looks like this:
+
 ![puzzle-cube-006](/img/puzzle-cube-006.png)
 
-### Converting each face into a solid object
+### Convert each face into a 3D object
 
-The simplest way to convert boolean arrays into solid, 3D-printable objects as to place a cube at each *true* value's coordinate. In general, however, we can use any shape as our puzzle element. Using [solidpython](https://github.com/SolidCode/SolidPython) we can define a python function called *element*, which generates OpenSCAD code for a cube with rounded edges:
+The simplest way to convert boolean arrays into solid, 3D-printable objects as to place a cube at each *true* value's coordinate. In general, however, we can use any shape as our puzzle element. For example, using [solidpython](https://github.com/SolidCode/SolidPython), we can define a python function called *element* that generates a cube with rounded edges:
 
 ```python
 from solid import *
@@ -121,11 +125,11 @@ def element(x, y, size, r=1, tol=.2, segments=32):
             for i, j, k in product(*3*[(r+tol, size-r-tol)]))))
 ```
 
-The shape produced by *element* is slightly diminished so that the puzzle fits together easily. Because of this, we need a simple *connector* object too:
+The shape produced by *element* is slightly diminished so that the puzzle pieces fit together easily. Because of this, we will need a simple *connector* object too:
 
 ```python
-def connector(x, y, size, r=1, tol=.2, segments=32):
-    return translate([size*x+r, size*y+r, r])(cube(size-2*r))
+def connector(x, y, size, r=1, tol=.2):
+    return translate([size*x+r+tol, size*y+r+tol, r+tol])(cube(size-2*(r+tol)))
 ```
 
 We can use these functions to define each piece as follows:
@@ -142,11 +146,13 @@ for n, face in enumerate(faces):
                 if j and face[i][j-1]: pieces[-1] += connector(i, j-.5, size)
 ```
 
-The list called *pieces* now contains solidpython objects that define the 3D geometry of our puzzle pieces!
+The list named *pieces* now contains solidpython objects that describe the 3D geometry of our puzzle pieces!
 
-### Saving each face
+![puzzle-cube-007](/img/puzzle-cube-007.png)
 
-Solidpython provides a function called *scad_render_to_file*, which creates OpenSCAD code from our solidpython objects. Combine this with an optional call to OpenSCAD's CLI and we have a function for saving pieces as STL files, directly from python!
+### Save each face
+
+Solidpython provides a function called *scad_render_to_file*, which creates OpenSCAD code from our solidpython objects. Combining this with an optional call to OpenSCAD's CLI, we have a function for saving pieces as STL files, directly from python!
 
 ```python
 from subprocess import call
@@ -165,11 +171,14 @@ Let's use this on each piece.
 
 ```python
 for n, piece in enumerate(pieces):
-    save(piece, 'piece_' + str(n), stl=stl)
+    save(piece, 'piece_' + str(n), stl=True)
 ```
 
 ## Lessons learnt
 
 ### Tools
 
+ - [OpenSCAD](http://www.openscad.org/)
+ - [SolidPython](https://github.com/SolidCode/SolidPython)
  - [This online isometric drawing tool](https://www.nctm.org/Classroom-Resources/Illuminations/Interactives/Isometric-Drawing-Tool/)
+ - [This online STL viewer](https://www.viewstl.com/)

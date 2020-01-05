@@ -84,7 +84,7 @@ A complete puzzle!
 
 ## Creating 3D objects
 
-### Get each face
+### Getting each face
 
 From here, getting the shape of each piece is a simple as checking each face for elements containing that face's value. This will produce a boolean array to represent each piece, with *true* values where the piece is to be filled and *false* where there are to be gaps. We store the boolean arrays in a list.
 
@@ -96,7 +96,11 @@ for n, (axis, end) in enumerate(product(range(3), (0, -1))):
     faces.append(array[tuple(idx)] == face_values[int(n/2)][n%2])
 ```
 
-At this point, a face might look something like this:
+At this point, the green face in our example looks like this:
+
+![puzzle-cube-006](/img/puzzle-cube-006.png)
+
+... which would be represented as:
 
 ```python
 array([[False, False, False, False],
@@ -105,11 +109,7 @@ array([[False, False, False, False],
        [ True, False,  True, False]])
 ```
 
-... which would represent a piece that looks like this:
-
-![puzzle-cube-006](/img/puzzle-cube-006.png)
-
-### Convert each face into a 3D object
+### Converting each face into a 3D object
 
 The simplest way to convert boolean arrays into solid, 3D-printable objects as to place a cube at each *true* value's coordinate. In general, however, we can use any shape as our puzzle element. For example, using [solidpython](https://github.com/SolidCode/SolidPython), we can define a python function called *element* that generates a cube with rounded edges:
 
@@ -146,11 +146,11 @@ for n, face in enumerate(faces):
                 if j and face[i][j-1]: pieces[-1] += connector(i, j-.5, size)
 ```
 
-The list named *pieces* now contains solidpython objects that describe the 3D geometry of our puzzle pieces!
+The list named *pieces* now contains solidpython objects that describe the 3D geometry of our puzzle pieces! Revisiting the green face from our example, the generated piece would look like this:
 
 ![puzzle-cube-007](/img/puzzle-cube-007.png)
 
-### Save each face
+### Saving each piece
 
 Solidpython provides a function called *scad_render_to_file*, which creates OpenSCAD code from our solidpython objects. Combining this with an optional call to OpenSCAD's CLI, we have a function for saving pieces as STL files, directly from python!
 
@@ -173,6 +173,10 @@ Let's use this on each piece.
 for n, piece in enumerate(pieces):
     save(piece, 'piece_' + str(n), stl=True)
 ```
+
+### 3D-printing
+
+Coming soon...
 
 ## Lessons learnt
 

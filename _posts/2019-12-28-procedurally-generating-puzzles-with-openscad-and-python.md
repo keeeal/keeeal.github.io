@@ -176,13 +176,42 @@ for n, piece in enumerate(pieces):
 
 ### 3D-printing
 
-Coming soon...
+Each generated piece prints flat and without much hassle.
 
-## Lessons learnt
+![puzzle-cube-007](/img/puzzle-cube-008.png)
 
-### Tools
+![puzzle-cube-007](/img/puzzle-cube-009.png)
 
- - [OpenSCAD](http://www.openscad.org/)
+## Do it yourself
+
+1. Clone or download the code from github:
+
+ ```
+ https://github.com/keeeal/puzzle-cube
+ ```
+
+2. Install the prerequisites:
+
+ ```
+ pip install solidpython numpy
+ ```
+
+3. Run the program:
+
+ ```
+ python puzzle_cube.py [--size SIZE] [--shape X Y Z] [--stl]
+ ```
+
+ optional arguments:
+
+ - *--size* — The size-length of a single cell in the puzzle. Default: 10 mm.
+ - *--shape* — The dimensions of the puzzle. Default: (4, 4, 4)
+ - *--stl* — Attempt to generate STL rather than SCAD files. (Requires the OpenSCAD)
+
+
+## Tools used
+
+ - [OpenSCAD](https://www.openscad.org/)
  - [SolidPython](https://github.com/SolidCode/SolidPython)
  - [This online isometric drawing tool](https://www.nctm.org/Classroom-Resources/Illuminations/Interactives/Isometric-Drawing-Tool/)
  - [This online STL viewer](https://www.viewstl.com/)

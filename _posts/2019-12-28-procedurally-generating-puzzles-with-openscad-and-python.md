@@ -7,7 +7,7 @@ This post describes a project in which I used OpenSCAD and Python to create a ra
 
 ![puzzle-cube-000](/img/puzzle-cube-000.png)
 
-I wrote this code as an exercise in procedurally generating 3D-printable objects. The algorithm produces six pieces that fit together to form a cube. Since the puzzle is randomly generated, the user is not aware of the solution. This means that even the puzzle's creator can have the satisfaction of solving it for themselves!
+I wrote this code as an exercise in procedurally generating 3D-printable objects. The algorithm creates six pieces that fit together to form a cube. Since the puzzle is randomly generated, even the puzzle's creator can have the satisfaction of solving it for themselves!
 
 ## The algorithm
 
@@ -65,7 +65,7 @@ Finally, we need to give values to the array's corner elements. But hang on, wer
 
 ![puzzle-cube-004](/img/puzzle-cube-004.png)
 
-The element in the top right corner is not connected to the rest of the green-coloured face! To solve this, we must choose the value of each corner randomly from the values of neighbouring elements. This ensures that each corner remains connected to a puzzle piece.
+The element in the top left corner is not connected to the rest of the green-coloured face! To solve this, we must choose the value of each corner randomly from the values of neighbouring elements. This ensures that each corner remains connected to a puzzle piece.
 
 In the code, we visit each of the 8 corners by again considering the index extremes of each axis. A delta array provides a way of getting the values of all neighbouring elements. A python set is used to remove duplicates, ensuring that having two neighbours of the same value doesn't double the probability of that value being chosen, although this is not strictly necessary. The code is as follows:
 

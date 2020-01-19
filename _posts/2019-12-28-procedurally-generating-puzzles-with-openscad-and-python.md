@@ -176,9 +176,11 @@ for n, piece in enumerate(pieces):
 
 ### 3D-printing
 
-Each generated piece prints flat and without much hassle.
+Each generated piece prints flat and without supports or a raft.
 
 ![puzzle-cube-007](/img/puzzle-cube-008.png)
+
+I experimented with 3×3×3, 4×4×4 and 5×5×5 cubes. 4×4×4 seems to be the sweet spot in difficulty, with smaller sides causing puzzles to have multiple solutions and larger sides making the solution too obvious.
 
 ![puzzle-cube-007](/img/puzzle-cube-009.png)
 
@@ -204,9 +206,9 @@ Each generated piece prints flat and without much hassle.
 
  optional arguments:
 
- - *--size* — The size-length of a single cell in the puzzle. Default: 10 mm.
- - *--shape* — The dimensions of the puzzle. Default: (4, 4, 4)
- - *--stl* — Attempt to generate STL rather than SCAD files. (Requires the OpenSCAD)
+ - *size* — The size-length of a single cell in the puzzle. Default: 10 mm.
+ - *shape* — The dimensions of the puzzle. Default: (4, 4, 4)
+ - *stl* — Attempt to generate STL rather than SCAD files. (Requires the OpenSCAD)
 
 
 ## Tools used

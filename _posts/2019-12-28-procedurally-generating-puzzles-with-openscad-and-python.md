@@ -5,7 +5,7 @@ tags: Misc python openscad
 
 This post describes a project in which I used OpenSCAD and Python to create a randomly generated puzzle cube.
 
-![puzzle-cube-000](/img/puzzle-cube-000.png)
+![puzzle-cube-000](/img/puzzle-cube-000.jpg)
 
 I wrote this code as an exercise in procedurally generating 3D-printable objects. The algorithm creates six pieces that fit together to form a cube. Since the puzzle is randomly generated, even the puzzle's creator can have the satisfaction of solving it for themselves!
 

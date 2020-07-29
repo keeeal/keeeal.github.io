@@ -39,12 +39,12 @@ My honours and PhD studies have been in using artificial intelligence to improve
 
 ## Projects
 
-1. A visual knapsack problem for maintaining a balanced diet. [Code](https://github.com/keeeal/nourish)
-2. A temporal difference bot for ultimate tic-tac-toe. [Code](https://github.com/keeeal/temporal-ut3). [Post](/2019/09/18/artificial-intelligence-and-ultimate-tic-tac-toe).
-3. A third person fantasy game with 4D graphics. [Code](https://github.com/keeeal/hyperforrest)
-4. A randomly generated 3D-printable puzzle cube. [Code](https://github.com/keeeal/puzzle-cube) [Post](/2019/12/28/procedurally-generating-puzzles-with-openscad-and-python)
-5. A bot that quotes my friends on discord. [Code](https://github.com/keeeal/quothbot)
-6. A simulated koi pond that uses genetic algorithms. [Code](https://github.com/keeeal/koi)
+1. A visual knapsack problem for maintaining a balanced diet. [[Code](https://github.com/keeeal/nourish)]
+2. A temporal difference bot for ultimate tic-tac-toe. [[Code](https://github.com/keeeal/temporal-ut3)] [[Blog post](temporal-difference-learning-for-ultimate-tic-tac-toe)]
+3. A third person fantasy game with 4D graphics. [[Code](https://github.com/keeeal/hyperforrest)]
+4. A randomly generated 3D-printable puzzle cube. [[Code](https://github.com/keeeal/puzzle-cube)] [[Blog post](procedurally-generating-puzzles-with-openscad-and-python)]
+5. A bot that quotes my friends on discord. [[Code](https://github.com/keeeal/quothbot)]
+6. A simulated koi pond that uses genetic algorithms. [[Code](https://github.com/keeeal/koi)]
 
 ## Email
 

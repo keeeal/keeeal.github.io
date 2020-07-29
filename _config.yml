@@ -23,7 +23,5 @@ sass:
   sass_dir: _sass
 
 nav:
- - name: "Projects"
-   link: "/projects"
  - name: "About Me"
    link: "/about"

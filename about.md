@@ -39,7 +39,7 @@ My honours and PhD studies have been in using artificial intelligence to improve
 
 ## Projects
 
-1. A visual knapsack problem for maintaining a balanced diet. [[Code](https://github.com/keeeal/nourish)]
+1. A visual knapsack problem for maintaining a balanced diet. [[Code](https://github.com/keeeal/nourish)] [[Demo](nourish)]
 2. A temporal difference bot for ultimate tic-tac-toe. [[Blog post](temporal-difference-learning-for-ultimate-tic-tac-toe)] [[Code](https://github.com/keeeal/temporal-ut3)]
 3. A third person fantasy game with 4D graphics. [[Code](https://github.com/keeeal/hyperforrest)]
 4. A randomly generated 3D-printable puzzle cube. [[Blog post](procedurally-generating-puzzles-with-openscad-and-python)] [[Code](https://github.com/keeeal/puzzle-cube)]

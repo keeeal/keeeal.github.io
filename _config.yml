@@ -25,3 +25,6 @@ sass:
 nav:
  - name: "About Me"
    link: "/about"
+
+plugins:
+  - jekyll-feed

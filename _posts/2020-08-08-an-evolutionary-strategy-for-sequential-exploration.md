@@ -3,9 +3,9 @@ layout: post
 tags: UT3
 ---
 
-A friend of mine is making a game called Chicken Wings - an energetic side-scroller where the protagonist, an ambitious chicken with lofty aspirations of space travel, need to avoid various obstacles and collect corn. In this post I will describe Proavis, the algorithm I built to play this game.
+A friend of mine is making a game called Chicken Wings - an energetic side-scroller where the protagonist, an ambitious chicken with lofty aspirations of space travel, needs to avoid various obstacles and collect corn. In this post I describe Proavis, the algorithm I built to play this game.
 
-(picture of chicken)
+![chicken-wings](/img/proavis-000.gif)
 
 Chicken Wings was made for a research project and one day it will be sent to a large cohort of research participants. But before this happens, it is important to make sure tht the game is playable and consistent. So, to do this, my friend asked a few people, myself included, to play test the game and quantify the of difficulty each level. I gave it a few goes but I wasn't much help. Let's just say video games aren't my forte. If I was going to help in any meaningful way I would have to automate the game testing process. So I made an evolutionary algorithm to play Chicken Wings. Here is how it works.
 
@@ -33,7 +33,7 @@ The purpose of selection is to use the previously assigned fitness values to app
 
 Crossover commonly used to explore new possibilities by mating two individuals together. The individuals created through this process get part of their genome from each of their parents and (hopefully) become better than either one of them. For example, the start of parent A's sequence may be more optimal that that of parent B, but parent B may have a more favorable end section. It is common practice, therefore, to create two new children by breaking both of the parents at a randomly chosen point and then swapping their tails.
 
-![equation-1](/img/proavis-001.png)
+![crossover](/img/proavis-001.png)
 
 However, this where the Proavis algorithm differs once again. You see, after the evaluation step is complete, one thing is true of all individuals in the population: They met their demise at the end of their genome. This is true because any elements that were not executed were ultimately removed from the individual. We know then, that every element in an individual proved successful at navigating the level until, near the very end, a relatively small number of misguided clicks caused the run to end. Intuitively then, it is the end of the individual that requires the most attention.
 
@@ -41,21 +41,21 @@ For this reason, the Proavis algorithm uses a crossover point chosen randomly bu
 
 ![equation-1](/img/proavis-002.png)
 
-where n is the length of the individual and b is a parameter that controls the degree of bias.
+where *n* is the length of the individual and *b* is a parameter that controls the degree of bias.
 
-This distribution has some favorable features. Firstly, on the domain of indices corresponding to elements in the individual (i.e. from 0 to n), the function ranges from 0 to 1. It is also monotonically increasing, with an exponential slope dictated by b. Finally, and perhaps most importantly, since the function is exponential it is self-similar for a given set of indices preceding n, e.g. between n - 10 and n, regardless of the value taken by n. This means that the parameter b dictates the probability of selecting index i, depending on the distance i is from n.
+This distribution has some favorable features. Firstly, on the domain of indices corresponding to elements in the individual (i.e. from 0 to *n*), the function ranges from 0 to 1. It is also monotonically increasing, with an exponential slope dictated by *b*. Finally, and perhaps most importantly, since the function is exponential it is self-similar for a given set of indices preceding *n*, e.g. between *n* - 10 and *n*, regardless of the value taken by *n*. This means that the parameter *b* dictates the probability of selecting an index *i*, depending on the distance *i* is from *n*.
 
-The distribution was sampled by setting p equal to a uniform random number from [0, 1) and finding x:
+The distribution was sampled by setting p equal to a uniform random number from [0, 1) and finding *x*:
 
 ![equation-2](/img/proavis-003.png)
 
-This point was then used as the crossover point. The parameter b must be larger than 1. A suitable value was found to be 1.02.
+This point was then used as the crossover point. The parameter *b* must be larger than 1. A suitable value was found to be 1.02.
 
 ### Mutation
 
 The final step required for a genetic algorithm is mutation. This operator introduces new genetic material to the population that may not be present in any one of the existing parents. A common way to do this is to visit an individual and, with some likelihood, randomize each element independently.
 
-![equation-2](/img/proavis-004.png)
+![mutation](/img/proavis-004.png)
 
 Once again, performing this operation with an equal likelihood everywhere does not serve the Proavis algorithm well. Mutations are particularly important near the end of an individual's sequence, where improvements must be made to overcome run-ending obstacles. This is difficult, however, if such a mutation can only occur while also mutating earlier elements.
 

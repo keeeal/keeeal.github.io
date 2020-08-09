@@ -6,6 +6,7 @@ tags: UT3
 A friend of mine is making a game called Chicken Wings - an energetic side-scroller where the protagonist, an ambitious chicken with lofty aspirations of space travel, needs to avoid various obstacles and collect corn. In this post I describe Proavis, the algorithm I built to play it.
 
 ![chicken-wings](/img/proavis-000.gif)
+###### Figure 1: A chicken with big dreams.
 
 Chicken Wings was made for a research project and one day it will be sent to a cohort of research participants. Before this happens, it is important to make sure tht the game is playable and consistent. So, to do this, my friend asked a few people including myself to play test his game and quantify the difficulty. I gave it a few goes but I wasn't much help. Let's just say video games aren't my thing. If I was going to help in any meaningful way I would have to automate the game testing process. So I made an evolutionary algorithm to play Chicken Wings. Here is how it works.
 
@@ -34,32 +35,31 @@ The purpose of selection is to use the previously assigned fitness values to app
 Crossover is commonly used to explore new possibilities by mating two individuals together. The individuals created through this process get part of their genome from each of their parents and (hopefully) become better than either one of them. For example, the start of parent *A*'s sequence may be more optimal that that of parent *B*, but parent *B* may have a more favorable end section. It is common practice, therefore, to create two new children by breaking both of the parents in half at a randomly chosen point and then swapping their tails.
 
 ![crossover](/img/proavis-001.png)
+###### Figure 2: Crossover. [Source: sciencedirect.com/topics/medicine-and-dentistry/genetic-operator]
 
 However, this where the Proavis algorithm differs once again. After the evaluation step is complete, one thing is true of all individuals in the population: They met their demise at the end of their genome. This is true because any elements that were not executed were ultimately removed from the individual. We know then, that every element in an individual proved successful at navigating the level until, near the end, a relatively small number of misguided clicks caused the run to abruptly end. Intuitively then, it is the end of the individual that requires the most attention.
 
 For this reason, the Proavis algorithm uses a crossover point chosen randomly but not uniformly. Instead, a strong bias is introduced to encourage exploration of the solution space near the end of a given individual. The equation of the probability distribution is as follows:
 
 ![equation-1](/img/proavis-002.png)
+###### Equation 1: The probability distribution for 0 <= *x* <= *n*.
 
 where *n* is the length of the individual and *b* is a parameter that controls the degree of bias.
 
 This distribution has some favorable features. Firstly, on the domain of indices corresponding to elements in the individual (*i.e.* from 0 to *n*), the function ranges from 0 to 1. It is also monotonically increasing, with an exponential slope dictated by *b*. Finally, and perhaps most importantly, since the function is exponential it is self-similar for a given number of indices preceding *n*, *e.g.* between *n* and *n* - 10. This means that regardless of the value taken by *n*, the parameter *b* dictates the probability of selecting an index *i* as a function of the distance between *i* and *n*.
 
-The distribution was sampled by setting *p* equal to a uniform random number from [0, 1) and rearranging for *x*:
-
-![equation-2](/img/proavis-003.png)
-
-This point was used as the crossover point. Note that the parameter *b* must be larger than 1, but not by much. A suitable value was found to be 1.02.
+A point sampled from this distribution was used as the crossover point. Note that the parameter *b* must be larger than 1, but not by very much. A suitable value was found to be 1.02.
 
 ### Mutation
 
-The final step required for a genetic algorithm is mutation. This operator introduces new genetic material to the population that may not be present in any one of the existing parents. A common way to do this is to visit an individual and, with some likelihood, randomize each element independently.
+The final step required for a genetic algorithm is mutation. This operator introduces new genetic material to the population that may not be found in any of the existing parents. A common way to do this is to visit each individual and, with some likelihood, randomize some of it's elements independently.
 
 ![mutation](/img/proavis-004.png)
+###### Figure 2: Mutation. [Source: sciencedirect.com/topics/medicine-and-dentistry/genetic-operator]
 
-Once again, performing this operation with an equal likelihood everywhere does not serve the Proavis algorithm well. Mutations are more important near the end of an individual's sequence, where improvements must be made to overcome run-ending obstacles. This is difficult, however, if such a mutation can only occur while also mutating earlier elements.
+Once again, performing this operation with an equal likelihood over an individual does not serve the Proavis algorithm well. Mutations are far more important near the end of an individual's sequence where improvements must be made to overcome run-ending obstacles. This is difficult, however, if such a mutation can only occur while also mutating earlier elements.
 
-Instead, by using the same probability distribution as described for crossover, a point was chosen with a strong bias towards points near the end of the sequence. Mutation was then applied only to elements that following this point. This approach allows points near the end of the individual, where a change is required, to be modified without impacting previous points and causing the individual's premature death.
+Instead, by using the same probability distribution as for crossover, a point was chosen with a strong bias towards points near the end of the sequence. Mutation was then applied only to elements that following this point. This approach allows points near the end of the individual, where change is required, to be modified without impacting previous points and causing the individual's premature death.
 
 ### Notes
 

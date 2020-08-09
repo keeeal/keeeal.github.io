@@ -46,7 +46,7 @@ For this reason, the Proavis algorithm uses a crossover point chosen randomly bu
 
 where *n* is the length of the individual and *b* is a parameter that controls the degree of bias.
 
-This distribution has some favorable features. Firstly, on the domain of indices corresponding to elements in the individual (*i.e.* from 0 to *n*), the function ranges from 0 to 1. It is also monotonically increasing, with an exponential slope dictated by *b*. Finally, and perhaps most importantly, since the function is exponential it is self-similar for a given number of indices preceding *n*, *e.g.* between *n* and *n* - 10. This means that regardless of the value taken by *n*, the parameter *b* dictates the probability of selecting *x* as a function of the distance between *x* and *n*.
+This distribution has some favorable features. Firstly, it is also monotonically increasing with an exponential slope dictated by *b*. Secondly, and perhaps most importantly, since the function is exponential it is self-similar for a given number of indices preceding *n*, *e.g.* between *n* and *n* - 10. This means that regardless of the value taken by *n*, the parameter *b* dictates the probability of selecting *x* as a function of the distance between *x* and *n*.
 
 A point sampled from this distribution was used as the crossover point. Note that the parameter *b* must be larger than 1, but not by very much. A suitable value was found to be 1.02.
 

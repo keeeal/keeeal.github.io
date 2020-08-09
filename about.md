@@ -23,7 +23,7 @@ My honours and PhD studies have been in using artificial intelligence to improve
 2. "3D modelling of EBRT radiation dose in heterogeneous media using artificial neural networks", Engineering and Physical Sciences in Medicine, 2017.
 3. "Keynote: The art of becoming a researcher in science", Australasian Conference of Undergraduate Research, 2017.
 4. "3D modelling of radiation dose in inhomogeneous media using artificial neural networks", Australasian Conference of Undergraduate Research, 2016.
-5. "Machine learning for external beam radiotherapy", Beacon Conference for Undergraduate Research, 2016. *Winner of Best Abstract*
+5. "Machine learning for external beam radiotherapy", Beacon Conference for Undergraduate Research, 2016. Winner of Best Abstract.
 
 ## Work
 
@@ -34,7 +34,7 @@ My honours and PhD studies have been in using artificial intelligence to improve
 ## Education
 
 1. PhD in Medical Physics, University of Adelaide, 2017 - Present
-2. Honours in Medical Physics, University of Adelaide, 2016. *Awarded First Class*
+2. Honours in Medical Physics, University of Adelaide, 2016. Awarded First Class.
 3. BSc. in High Performance Computational Physics, 2015.
 
 ## Projects

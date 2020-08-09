@@ -8,7 +8,7 @@ A friend of mine is making a game called Chicken Wings - an energetic side-scrol
 ![chicken-wings](/img/proavis-000.gif)
 ###### Figure 1: A chicken with big dreams.
 
-Chicken Wings was made for a research project and one day it will be sent to a cohort of research participants. Before this happens, it is important to make sure tht the game is playable and consistent. So, to do this, my friend asked a few people including myself to play test his game and quantify the difficulty. I gave it a few goes but I wasn't much help. Let's just say video games aren't my thing. If I was going to help in any meaningful way I would have to automate the game testing process. So I made an evolutionary algorithm to play Chicken Wings. Here is how it works.
+Chicken Wings was made for a research project and one day it will be sent to a cohort of research participants. Before this happens, it is important to make sure the game is playable and consistent. So, to do this, my friend asked a few people including myself to play test his game and quantify the difficulty. I gave it a few goes but I wasn't much help. Let's just say video games aren't my thing. If I was going to help in any meaningful way I would have to automate the game testing process. So I made an evolutionary algorithm to play Chicken Wings. Here is how it works.
 
 ## The Algorithm
 
@@ -46,7 +46,7 @@ For this reason, the Proavis algorithm uses a crossover point chosen randomly bu
 
 where *n* is the length of the individual and *b* is a parameter that controls the degree of bias.
 
-This distribution has some favorable features. Firstly, on the domain of indices corresponding to elements in the individual (*i.e.* from 0 to *n*), the function ranges from 0 to 1. It is also monotonically increasing, with an exponential slope dictated by *b*. Finally, and perhaps most importantly, since the function is exponential it is self-similar for a given number of indices preceding *n*, *e.g.* between *n* and *n* - 10. This means that regardless of the value taken by *n*, the parameter *b* dictates the probability of selecting an index *i* as a function of the distance between *i* and *n*.
+This distribution has some favorable features. Firstly, on the domain of indices corresponding to elements in the individual (*i.e.* from 0 to *n*), the function ranges from 0 to 1. It is also monotonically increasing, with an exponential slope dictated by *b*. Finally, and perhaps most importantly, since the function is exponential it is self-similar for a given number of indices preceding *n*, *e.g.* between *n* and *n* - 10. This means that regardless of the value taken by *n*, the parameter *b* dictates the probability of selecting *x* as a function of the distance between *x* and *n*.
 
 A point sampled from this distribution was used as the crossover point. Note that the parameter *b* must be larger than 1, but not by very much. A suitable value was found to be 1.02.
 
@@ -55,7 +55,7 @@ A point sampled from this distribution was used as the crossover point. Note tha
 The final step required for a genetic algorithm is mutation. This operator introduces new genetic material to the population that may not be found in any of the existing parents. A common way to do this is to visit each individual and, with some likelihood, randomize some of it's elements independently.
 
 ![mutation](/img/proavis-004.png)
-###### Figure 2: Mutation. [Source: sciencedirect.com/topics/medicine-and-dentistry/genetic-operator]
+###### Figure 3: Mutation. [Source: sciencedirect.com/topics/medicine-and-dentistry/genetic-operator]
 
 Once again, performing this operation with an equal likelihood over an individual does not serve the Proavis algorithm well. Mutations are far more important near the end of an individual's sequence where improvements must be made to overcome run-ending obstacles. This is difficult, however, if such a mutation can only occur while also mutating earlier elements.
 

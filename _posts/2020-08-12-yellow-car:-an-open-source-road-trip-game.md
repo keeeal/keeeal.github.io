@@ -7,15 +7,15 @@ tags: UT3
 
 ### The Basics
 
-1. If a player sees a yellow car they may make a claim and receive a point. This is referred to as "calling".
+[1]  If a player sees a yellow car they may make a claim and receive a point. This is referred to as "calling".
 
-    ### Yellow
+### Yellow
 
-2. Only cars which are yellow may be called.
+[2]  Only cars which are yellow may be called.
 
-    2.2. Shades of green, even very light ones, are not yellow.
+    [2.2]  Shades of green, even very light ones, are not yellow.
 
-    2.3. Metallic yellow, as defined by a yellow base colour and a high reflectivity, is allowed. Gold is not yellow. Nor is bronze, copper or any other simulation of a real metal. Not even [Muntz Metal](https://en.wikipedia.org/wiki/Muntz_metal) (a.k.a. yellow metal) is not yellow.
+    [2.3]  Metallic yellow, as defined by a yellow base colour and a high reflectivity, is allowed. Gold is not yellow. Nor is bronze, copper or any other simulation of a real metal. Not even [Muntz Metal](https://en.wikipedia.org/wiki/Muntz_metal) (a.k.a. yellow metal) is not yellow.
 
     2.4. Pearlescent paints are not allowed unless the only colours in it are shades of yellow.
 

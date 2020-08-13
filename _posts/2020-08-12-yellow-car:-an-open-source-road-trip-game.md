@@ -9,7 +9,7 @@ tags: UT3
 
 1. If a player sees a yellow car they may make a claim and receive a point. This is referred to as "calling".
 
-### Yellow
+ ### Yellow
 
 2. Only cars which are yellow may be called.
 

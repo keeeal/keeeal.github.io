@@ -3,7 +3,7 @@ layout: headerless
 title: Croissant Vibes FC
 ---
 
-<div id="myShop">
+<div id="myShop", style="position: absolute; left: 0; width: 100%">
     <a href="https://shop.spreadshirt.com.au/croissant-vibe-fc">croissant-vibe-fc</a>
 </div>
 

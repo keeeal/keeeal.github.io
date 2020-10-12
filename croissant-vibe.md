@@ -12,6 +12,9 @@ title: Croissant Vibe FC
   #sprd-footer {
     display: none;
   }
+  .sprd-breadcrumb {
+    display: none;
+  }
 </style>
 
 <div id="myShop">

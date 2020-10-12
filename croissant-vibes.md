@@ -4,11 +4,14 @@ title: Croissant Vibe FC
 ---
 
 <style type="text/css" scoped>
-    #myShop {
-        position: absolute;
-        left: 0;
-        width: 100%;
-    } 
+  #myShop {
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+  #sprd-footer {
+    display: none;
+  }
 </style>
 
 <div id="myShop">

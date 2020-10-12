@@ -1,3 +1,8 @@
+---
+layout: default
+title: Croissant Vibes FC
+---
+
 <div id="myShop">
     <a href="https://shop.spreadshirt.com.au/croissant-vibe-fc">croissant-vibe-fc</a>
 </div>

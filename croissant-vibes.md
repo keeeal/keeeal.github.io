@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: headerless
 title: Croissant Vibes FC
 ---
 

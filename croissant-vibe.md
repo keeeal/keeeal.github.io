@@ -13,7 +13,7 @@ title: Croissant Vibe FC
     display: none;
   }
   .sprd-breadcrumb {
-    display: none;
+    display: none !important;
   }
 </style>
 

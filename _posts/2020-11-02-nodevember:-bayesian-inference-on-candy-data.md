@@ -3,13 +3,15 @@ layout: post
 tags: UT3
 ---
 
-It's November, the season of [personal challenges and self improvement](https://en.wikipedia.org/wiki/No_Nut_November). In the spirit of this, the procedural generation community celebrate [Nodevember](https://nodevember.io/), a daily challenge with the goal of inspiring 3D modellers and VFX artists to improve their node-based procedural skills. But you know what else has nodes: Bayesian networks! So here I present my unorthodox take on Nodevember. Based on each one word theme, I hope to invent a task or explore a dataset using a machine learning model that, at least in some sense, has nodes.
+It's November, the season of [personal challenges and self improvement](https://en.wikipedia.org/wiki/No_Nut_November). In the spirit of this, the procedural generation community celebrate [Nodevember](https://nodevember.io/), a daily challenge with the goal of inspiring 3D modellers and VFX artists to improve their node-based procedural skills. But you know what else has nodes: Bayesian networks!
+
+So here I present my unorthodox take on Nodevember. Based on each one word theme, I hope to invent a task or explore a dataset using a machine learning model that, at least in some sense, has nodes.
 
 Today's theme is "candy". A quick search for a "candy dataset" drew my attention to [this fantastic dataset](https://www.kaggle.com/fivethirtyeight/fivethirtyeight-candy-power-ranking-dataset) provided by [FiveThirtyEight](https://fivethirtyeight.com/videos/the-ultimate-halloween-candy-power-ranking/). The dataset is a small but interesting tabulation of information about different kinds of candy. For example, is it chocolaty? Is there nougat in it? How does the cost compare to other candies? Finally, the researchers set up an online survey that asked participants to select their preference out of two randomly chosen candies. More than 8000 participants voted on about 269,000 randomly generated matchups, making this a fascinating sample of what candies people prefer.
 
 ## Importing the data
 
-The candy data is provided as a CSV file. We can use [Pandas](https://pandas.pydata.org/) to import it. We drop the *'competitorname'* column since it is unimportant convert *'winpercent'* from a percentage to a value between 0 and 1. Strangely, the *'sugarpercent'* and *'pricepercent'* values are not percentages at all and are already in this range.
+The candy data is provided as a CSV file. We can use [Pandas](https://pandas.pydata.org/) to import it. We drop the *'competitorname'* column since it is unimportant and then convert *'winpercent'* from a percentage to a value between 0 and 1. Strangely, the *'sugarpercent'* and *'pricepercent'* values are not percentages at all and are already in this range.
 
 ```python
 import pandas as pd
@@ -86,14 +88,14 @@ from causalnex.plots import plot_structure
 structure = notears.from_pandas(data)
 structure.remove_edges_below_threshold(0.3)
 
-graph = plot_structure(structure, graph_attributes={'scale': '2'})
+graph = plot_structure(structure, graph_attributes={'scale': '1.5'})
 graph.draw('structure.png')
 ```
 
 ![candy-002](/img/candy-002.png)
 ###### Figure 2: The structure learned from candy dataset using NOTEARS.
 
-So what is this structure telling us? Well, to assign causality to or from the majority of the variables in this dataset makes little sense. Is being a bar the reason a candy is chocolatey? No, they are simply correlated. Yet a proposed arrow of causality has been drawn between *'bar'* and *'chocolate'*. Arguably, the only variables that can be causal endpoints are *'winpercent'*, *'sugarpercent'*, and *'pricepercent'*, with all others being independent factors. At this point we can include such domain knowledge by manually updating the graph. However, I think that the outcome of structure learning like this is cool, so I'm going to leave it for now.
+So what is this structure telling us? Well, to assign causality to or from the majority of the variables in this dataset makes little sense. Is being a bar the reason a candy is chocolatey? No, they are simply correlated. Yet a proposed arrow of causality has been drawn between *'bar'* and *'chocolate'*. Arguably, the only variables that can be causal endpoints are *'winpercent'*, *'sugarpercent'*, and *'pricepercent'*, with all others being independent factors. At this point we could include some domain knowledge by manually updating the graph. However, I think that the outcome of structure learning like this is cool, so I'm going to leave it for now.
 
 ### Discretising continuous variables
 
@@ -192,7 +194,7 @@ print(predictions)
 42    1
 ```
 
-These values mostly match, meaning our model was able to predict the chocolateyness of previously unseen candy types!
+These values mostly match, meaning our model was able to predict the chocolatiness of previously unseen candy types!
 
 ```python
 report = classification_report(model, test, test_variable)

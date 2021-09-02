@@ -27,13 +27,14 @@ My honours and PhD studies have been in using artificial intelligence to improve
 
 ## Publications / Presentations
 
-1. J. Keal, A. Santos, S. Penfold, M. Douglass: "Radiation dose calculation in 3D heterogeneous media using artificial neural networks", Medical Physics, 2020.
-2. J. Kowlessar, J. Keal, D. Wesley, I. Moffat: "Reconstructing rock art chronology with transfer learning: A case study from Arnhem Land, Australia", Pattern Recognition Letters, 2020.
-3. "Simplex noise as training data for learned 3D dose calculation", 6th Loma Linda Workshop on Particle Imaging and Radiation Treatment Planning, 2020.
-4. "3D modelling of EBRT radiation dose in heterogeneous media using artificial neural networks", Engineering and Physical Sciences in Medicine, 2017.
-5. "Keynote: The art of becoming a researcher in science", Australasian Conference of Undergraduate Research, 2017.
-6. "3D modelling of radiation dose in inhomogeneous media using artificial neural networks", Australasian Conference of Undergraduate Research, 2016.
-7. "Machine learning for external beam radiotherapy", Beacon Conference for Undergraduate Research, 2016. Winner of Best Abstract.
+1. M. Douglass, J. Keal: "DeepWL: Robust EPID based Winston-Lutz Analysis using Deep Learning and Synthetic Image Generation", Physica Medica, 2021.
+2. J. Keal, A. Santos, S. Penfold, M. Douglass: "Radiation dose calculation in 3D heterogeneous media using artificial neural networks", Medical Physics, 2020.
+3. J. Kowlessar, J. Keal, D. Wesley, I. Moffat: "Reconstructing rock art chronology with transfer learning: A case study from Arnhem Land, Australia", Pattern Recognition Letters, 2020.
+4. "Simplex noise as training data for learned 3D dose calculation", 6th Loma Linda Workshop on Particle Imaging and Radiation Treatment Planning, 2020.
+5. "3D modelling of EBRT radiation dose in heterogeneous media using artificial neural networks", Engineering and Physical Sciences in Medicine, 2017.
+6. "Keynote: The art of becoming a researcher in science", Australasian Conference of Undergraduate Research, 2017.
+7. "3D modelling of radiation dose in inhomogeneous media using artificial neural networks", Australasian Conference of Undergraduate Research, 2016.
+8. "Machine learning for external beam radiotherapy", Beacon Conference for Undergraduate Research, 2016. Winner of Best Abstract.
 
 ## Projects
 

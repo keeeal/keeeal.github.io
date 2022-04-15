@@ -21,7 +21,7 @@ title: James Keal
 2. Honours in Medical Physics, University of Adelaide: 2016. Awarded First Class.
 3. BSc. in High Performance Computational Physics: 2015.
 
-## Publications / Presentations
+## Publications
 
 1. M. Douglass, J. Keal: "DeepWL: Robust EPID based Winston-Lutz Analysis using Deep Learning and Synthetic Image Generation", Physica Medica, 2021.
 2. J. Keal, A. Santos, S. Penfold, M. Douglass: "Radiation dose calculation in 3D heterogeneous media using artificial neural networks", Medical Physics, 2020.

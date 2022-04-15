@@ -34,7 +34,7 @@ title: James Keal
 
 ## Email
 
-Home: [james@keal.com.au](mailto:j@keal.au)
+Home: [j@keal.au](mailto:j@keal.au)
 
 Work: [jkeal@micro-x.com](mailto:jkeal@micro-x.com)
 

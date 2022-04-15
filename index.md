@@ -32,18 +32,9 @@ title: James Keal
 7. "3D modelling of radiation dose in inhomogeneous media using artificial neural networks", Australasian Conference of Undergraduate Research, 2016.
 8. "Machine learning for external beam radiotherapy", Beacon Conference for Undergraduate Research, 2016. Winner of Best Abstract.
 
-## Projects
-
-1. A visual knapsack problem for maintaining a balanced diet. [[Code](https://github.com/keeeal/nourish)] [[Demo](nourish)]
-2. A temporal difference bot for ultimate tic-tac-toe. [[Blog post](temporal-difference-learning-for-ultimate-tic-tac-toe)] [[Code](https://github.com/keeeal/temporal-ut3)]
-3. A third person fantasy game with 4D graphics. [[Code](https://github.com/keeeal/hyperforrest)]
-4. A randomly generated 3D-printable puzzle cube. [[Blog post](procedurally-generating-puzzles-with-openscad-and-python)] [[Code](https://github.com/keeeal/puzzle-cube)]
-5. A bot that quotes my friends on discord. [[Code](https://github.com/keeeal/quothbot)]
-6. A simulated koi pond that uses genetic algorithms. [[Code](https://github.com/keeeal/koi)]
-
 ## Email
 
-Home: [james@keal.com.au](mailto:james@keal.com.au)
+Home: [james@keal.com.au](mailto:j@keal.au)
 
 Work: [jkeal@micro-x.com](mailto:jkeal@micro-x.com)
 

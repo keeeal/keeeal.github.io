@@ -1,10 +1,9 @@
-title: jameskeal.com.au
+title: keal.au
 description: "James Keal"
-url: "https://jameskeal.com.au"
+url: "https://keal.au"
 baseurl: "/"
 
-favicon: yes
-favicon_dir: "/img/favicon"
+favicon: no
 
 author: James Keal
 profile_picture: "https://avatars2.githubusercontent.com/u/2309403"
@@ -22,9 +21,9 @@ sass:
   style: compressed
   sass_dir: _sass
 
-nav:
- - name: "About Me"
-   link: "/about"
+# nav:
+#  - name: "About Me"
+#    link: "/about"
 
 plugins:
   - jekyll-feed

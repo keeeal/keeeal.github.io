@@ -11,7 +11,7 @@ title: James Keal
 ## Work
 
 1. Embedded Software Engineer at Micro-X: April 2021 - Current
- - Wrote embedded firmware for medical imaging devices. Drove product design using radiation transport simulations. Provided dev-ops for a remote team in the US. Contributed to CT image reconstruction algorithm design.
+ - Wrote firmware for medical imaging devices. Drove product design using radiation transport simulations. Provided dev-ops for a remote team in the US. Contributed to CT image reconstruction algorithm design.
 1. Intern at Defence Science and Technology, Adelaide: March 2018 - August 2018
  - Defence applications of artificial intelligence. Developed software under Joint and Operations Analysis Division.
 1. Software Engineer at Quantum Code: 2015 - 2016

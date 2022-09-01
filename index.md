@@ -11,15 +11,20 @@ title: James Keal
 ## Work
 
 1. Embedded Software Engineer at Micro-X: April 2021 - Current
- - test
+ - Wrote embedded firmware for medical imaging devices. Drove product design using radiation transport simulations. Provided dev-ops for a remote team in the US. Contributed to CT image reconstruction algorithm design.
 1. Intern at Defence Science and Technology, Adelaide: March 2018 - August 2018
+ - Defence applications of artificial intelligence. Developed software under Joint and Operations Analysis Division.
 1. Software Engineer at Quantum Code: 2015 - 2016
+ - Developer of online services. Worked with a small team to create web-app and database solutions for small businesses and local government.
 1. Self-employed Web Developer: 2013 - 2015
+ - Created websites on a contractual basis.
 
 ## Education
 
 1. PhD in Medical Physics, University of Adelaide: 2017 - Present
+ - Thesis on the application of machine learning to dosimetry in radiotherapy. Developed novel deep learning architectures and data processing pipelines. Coursework in radiobiology and medical imaging. Founded the Adelaide Artificial Intelligence Club.
 1. Honours in Medical Physics, University of Adelaide: 2016. Awarded First Class.
+ - Awarded first class. Double major in theoretical physics and computer science. Courses taken in software engineering and electronics.
 1. BSc. in High Performance Computational Physics: 2015.
 
 ## Publications

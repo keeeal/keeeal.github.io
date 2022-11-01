@@ -1,5 +1,5 @@
 ---
-layout: headerless
+layout: no-nav
 title: James Keal
 ---
 

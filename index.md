@@ -10,7 +10,7 @@ title: James Keal
 
 ## Work
 
-1. Machine Learning Engineer at Harrison.ai - November 2022 - Current
+1. Machine Learning Engineer at Harrison.ai: November 2022 - Current
 1. Embedded Software Engineer at Micro-X: April 2021 - November 2022
  - Wrote firmware for medical imaging devices. Drove product design using radiation transport simulations. Provided dev-ops for a remote team in the US. Contributed to CT image reconstruction algorithm design.
 1. Intern at Defence Science and Technology, Adelaide: March 2018 - August 2018

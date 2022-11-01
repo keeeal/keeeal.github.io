@@ -10,7 +10,8 @@ title: James Keal
 
 ## Work
 
-1. Embedded Software Engineer at Micro-X: April 2021 - Current
+1. Machine Learning Engineer at Harrison.ai - November 2022 - Current
+1. Embedded Software Engineer at Micro-X: April 2021 - November 2022
  - Wrote firmware for medical imaging devices. Drove product design using radiation transport simulations. Provided dev-ops for a remote team in the US. Contributed to CT image reconstruction algorithm design.
 1. Intern at Defence Science and Technology, Adelaide: March 2018 - August 2018
  - Defence applications of artificial intelligence. Developed software under Joint and Operations Analysis Division.
@@ -21,7 +22,7 @@ title: James Keal
 
 ## Education
 
-1. PhD in Medical Physics, University of Adelaide: 2017 - Present
+1. PhD in Medical Physics, University of Adelaide: 2017
  - Thesis on the application of machine learning to dosimetry in radiotherapy. Developed novel deep learning architectures and data processing pipelines. Coursework in radiobiology and medical imaging. Founded the Adelaide Artificial Intelligence Club.
 1. Honours in Medical Physics, University of Adelaide: 2016. Awarded First Class.
  - Awarded first class. Double major in theoretical physics and computer science. Courses taken in software engineering and electronics.
@@ -43,15 +44,6 @@ title: James Keal
 
 Home: [j@keal.au](mailto:j@keal.au)
 
-Work: [jkeal@micro-x.com](mailto:jkeal@micro-x.com)
+Work: [james.keal@harrison.ai](mailto:jkeal@micro-x.com)
 
-Uni: [james.keal@adelaide.edu.au](mailto:james.keal@adelaide.edu.au)
-
-<!--
-
-## Social
-
-* [Twitter](https://twitter.com/_keeeal)
-* [LinkedIn](https://www.linkedin.com/in/jkeal/)
-
--->
+Research: [james.keal@adelaide.edu.au](mailto:james.keal@adelaide.edu.au)

@@ -1,0 +1,18 @@
+---
+layout: head
+---
+
+<body>
+  <div class="wrapper">
+    <main class="container">
+      {{ content }}
+    </main>
+    {% if site.footer == true %}
+    <footer>
+      <a href="{{ site.footer_url }}" style="color: black">
+        <small>{{ site.footer_text }}</small>
+      </a>
+    </footer>
+    {% endif %}
+  </div>
+</body>
